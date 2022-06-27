@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+        function conversion(eve) {
+
+            var val = Number(document.getElementById('val').value);
+            if (val !== undefined) {
+                document.getElementById("cel").innerHTML = String(100 * ((val - 32) / 180));
+                document.getElementById("mil").innerHTML = String(0.621371 * val);
+                document.getElementById("pon").innerHTML = String(2.20462 * val);
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <h1>Converter</h1>
+
+        <form onkeyup="conversion()">
+
+            <label for="val">
+                Enter Value:
+            </label>
+            <input type="text" id="val" />
+        </form>
+        <br />
+        <div class="container">
+            <br />
+            <br />
+
+            <h3>Converted Values</h3>
+            <div class="col">
+                <label for="cel">Celsius:</label>
+                <div class="col" id="cel">
+                </div>
+
+                <label for="mil">Miles:</label>
+                <div class="col" id="mil">
+                </div>
+                <label for="pon">Pounds:</label>
+                <div class="col" id="pon">
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+html {
+    margin: 10rem;
+    background-color: beige;
+    text-align: center;
+}
+
+.col {
+    border: 0.01rem black solid;
+}
